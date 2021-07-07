@@ -13,4 +13,7 @@ public @Data class Teams {
     private int overTime;
     private int goalsScored;
 
+    public Teams() {
+
+    }
 }
