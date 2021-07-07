@@ -41,7 +41,6 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
     implementation 'com.android.volley:volley:1.2.0'
-    implementation 'com.google.android.material:1.2.0-alpha04'
-    implementation 'com.android.volley:volley:1.2.0'
+
 
 }

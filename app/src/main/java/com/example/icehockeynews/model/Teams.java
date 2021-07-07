@@ -16,4 +16,13 @@ public @Data class Teams {
     public Teams() {
 
     }
+
+    @Override
+    public String toString() {
+        return
+                 name + " " + "GP" + " " +gamesPlayed + " " +
+                 "W"+ " " + wins + " " + "L" + " " + losses + " " + "PTS" + " " +
+                 points+ " " + "OT" + " " + overTime + " " + "GF" + " " + goalsScored
+                ;
+    }
 }

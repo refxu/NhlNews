@@ -12,10 +12,10 @@ import com.example.icehockeynews.model.Teams;
 
 public class RankingNhl {
 
-    public static List<Division> createTabelleFromJsonString(String tabelleJsonString) throws JSONException{
+    public static List<Division> createTabelleFromJsonString(JSONObject response) throws JSONException{
 
         List<Division> divisionList = new ArrayList<Division>();
-        JSONObject ranglisteObject = new JSONObject(tabelleJsonString);
+        JSONObject ranglisteObject = response;
         JSONArray recordsObject = ranglisteObject.getJSONArray("records");
 
         for (int i = 0; i < recordsObject.length(); i++) {
@@ -38,6 +38,7 @@ public class RankingNhl {
                 teams.setWins(leagueRecordInObject.getInt("wins"));
                 teams.setLosses(leagueRecordInObject.getInt("losses"));
                 teams.setPoints(teamObject.getInt("points"));
+                teams.setGamesPlayed(teamInfoObject.getInt("gamesPlayed"));
                 teams.setGoalsScored(teamObject.getInt("goalsScored"));
 
                 teamsList.add(teams);
